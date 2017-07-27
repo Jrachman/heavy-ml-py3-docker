@@ -16,7 +16,7 @@ Designed for heavy computations in Python 3 including TensorFlow.
 
 2. Execute `docker pull julianrachman/heavy-ml-py3:latest` in the terminal.
 
-3. Use `docker run -it --network=host -p 8888:8888 -e "PASSWORD=pass" --name jrtfpy3 julianrachman/heavy-ml-py3:latest` to run this.
+3. Use `docker run -it --network=host -p 8888:8888 -e "PASSWORD=pass" --name jrmlpy3 julianrachman/heavy-ml-py3:latest` to run this.
 
 4. Run `config/run_jupyter.sh --allow-root` and you are set! Just visit http://localhost:8888 and the password should be "pass."
 
@@ -28,7 +28,7 @@ Designed for heavy computations in Python 3 including TensorFlow.
  
 3. After the build is complete, execute `docker images`, find the most recent `IMAGE ID`
  
-4. Now execute `docker run -it -p 8888:8888 -e "PASSWORD=pass" --name jrtfpy3 <IMAGE ID>`
+4. Now execute `docker run -it -p 8888:8888 -e "PASSWORD=pass" --name jrmlpy3 <IMAGE ID>`
 
 4. Run `config/run_jupyter.sh --allow-root` and you are set! Just visit http://localhost:8888 and the password should be "pass."
  
