@@ -12,7 +12,7 @@ Designed for heavy computations in Python 3 including TensorFlow.
 
 *Pre-built image*
 
-1. There is a pre-built image that was created: https://hub.docker.com/r/julianrachman/tensorflow-py3/
+1. There is a pre-built image that was created: https://hub.docker.com/r/julianrachman/heavy-ml-py3/
 
 2. Execute `docker pull julianrachman/heavy-ml-py3:latest` in the terminal.
 
