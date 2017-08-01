@@ -32,7 +32,6 @@ RUN pip --no-cache-dir install \
         beautifulsoup4 \
         cookielib \
         elasticsearch \
-        exceptions \
         h5py \
         ipykernel \
         jupyter \
