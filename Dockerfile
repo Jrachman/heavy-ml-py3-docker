@@ -39,6 +39,8 @@ RUN pip --no-cache-dir install \
         pandas \
         requests \
         scipy \
+        scrapy \
+        selenium \
         sklearn \
         zeep \
         && \
