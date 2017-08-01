@@ -56,6 +56,8 @@ COPY notebooks /notebooks
 
 COPY run_jupyter.sh /notebooks/config
 
+COPY geckodriver /usr/local/bin
+
 EXPOSE 6006
 
 EXPOSE 8888
@@ -63,3 +65,5 @@ EXPOSE 8888
 WORKDIR "/notebooks"
 
 RUN cd config && chmod +x run_jupyter.sh
+
+RUN cd .. && cd usr/local/bin && chmod +x geckodriver
