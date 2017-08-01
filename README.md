@@ -18,7 +18,7 @@ Designed for heavy computations in Python 3 including TensorFlow.
 
 3. Use `docker run -it --network=host -p 8888:8888 -e "PASSWORD=pass" --name jrmlpy3 julianrachman/heavy-ml-py3:latest` to run this.
 
-4. Run `config/run_jupyter.sh --allow-root` and you are set! Just visit http://localhost:8888 and the password should be "pass."
+4. Run `config/run_jupyter.sh --allow-root` and you are set! Just visit http://localhost:8888 and the password should be "pass" (if localhost does not work, remove the the container that you just made and run the same `run` command except the `--network=host` part).
 
 *Local build*
 
