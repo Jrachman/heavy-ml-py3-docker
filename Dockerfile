@@ -29,6 +29,7 @@ RUN curl -O https://bootstrap.pypa.io/get-pip.py && \
 RUN pip --no-cache-dir install \
         GitPython \
         Pillow \
+        beautifulsoup4 \
         elasticsearch \
         h5py \
         ipykernel \
