@@ -31,6 +31,7 @@ RUN pip --no-cache-dir install \
         Pillow \
         beautifulsoup4 \
         elasticsearch \
+        exceptions \
         h5py \
         ipykernel \
         jupyter \
