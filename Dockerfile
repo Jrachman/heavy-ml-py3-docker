@@ -30,7 +30,6 @@ RUN pip --no-cache-dir install \
         GitPython \
         Pillow \
         beautifulsoup4 \
-        cookielib \
         elasticsearch \
         h5py \
         ipykernel \
@@ -40,14 +39,11 @@ RUN pip --no-cache-dir install \
         nbconvert \
         numpy \
         pandas \
-        re \
         requests \
         scipy \
         scrapy \
         selenium \
         sklearn \
-        urllib \ 
-        urllib2
         zeep \
         && \
     python3 -m ipykernel.kernelspec
