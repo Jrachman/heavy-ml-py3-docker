@@ -94,10 +94,10 @@ RUN cd config && chmod +x run_jupyter.sh
 
 RUN git clone https://github.com/tensorflow/tensorflow
 
-RUN echo "deb [arch=amd64] http://storage.googleapis.com/bazel-apt stable jdk1.8" && \
-        tee /etc/apt/sources.list.d/bazel.list && \
-        curl https://bazel.build/bazel-release.pub.gpg && \
-        apt-key add - && \
-        apt-get update && \ 
-        apt-get install bazel && \
-        apt-get upgrade bazel
+RUN echo "deb [arch=amd64] http://storage.googleapis.com/bazel-apt stable jdk1.8"
+RUN tee /etc/apt/sources.list.d/bazel.list
+RUN curl https://bazel.build/bazel-release.pub.gpg
+RUN apt-key add -
+RUN apt-get update 
+RUN apt-get install bazel
+RUN apt-get upgrade bazel
