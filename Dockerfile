@@ -97,7 +97,7 @@ RUN git clone https://github.com/tensorflow/tensorflow
 
 RUN echo "deb [arch=amd64] http://storage.googleapis.com/bazel-apt stable jdk1.8"
 RUN tee /etc/apt/sources.list.d/bazel.list
-RUN wget –no-check-certificate https://bazel.build/bazel-release.pub.gpg | apt-key add -
+RUN wget https://bazel.build/bazel-release.pub.gpg | apt-key add -
 RUN apt-get update 
 RUN apt-get install bazel
 RUN apt-get upgrade bazel
