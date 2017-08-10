@@ -9,10 +9,12 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
         libfreetype6-dev \
         libpng12-dev \
         libzmq3-dev \
+        openjdk-8-jdk \
         pkg-config \
         python3 \
         python3-dev \
         python3-tk \
+        python3-wheel \
         rsync \
         software-properties-common \
         unzip \
@@ -48,10 +50,16 @@ RUN pip --no-cache-dir install \
         && \
     python3 -m ipykernel.kernelspec
     
-
-#=========
-# Firefox
-#=========
+RUN git clone https://github.com/tensorflow/tensorflow && \
+        echo "deb [arch=amd64] http://storage.googleapis.com/bazel-apt stable jdk1.8" | tee /etc/apt/sources.list.d/bazel.list && \
+        curl https://bazel.build/bazel-release.pub.gpg | apt-key add - && \
+        apt-get update && \ 
+        apt-get install bazel && \
+        apt-get upgrade bazel
+        
+#========================#
+# Firefox and Geckodriver
+#========================#
 ARG FIREFOX_VERSION=54.0
 RUN apt-get update -qqy \
   && apt-get -qqy --no-install-recommends install firefox \
@@ -64,9 +72,6 @@ RUN apt-get update -qqy \
   && mv /opt/firefox /opt/firefox-$FIREFOX_VERSION \
 && ln -fs /opt/firefox-$FIREFOX_VERSION/firefox /usr/bin/firefox
 
-#============
-# geckodriver
-#============
 ARG GECKODRIVER_VERSION=0.17.0
 RUN wget --no-verbose -O /tmp/geckodriver.tar.gz https://github.com/mozilla/geckodriver/releases/download/v$GECKODRIVER_VERSION/geckodriver-v$GECKODRIVER_VERSION-linux64.tar.gz \
   && rm -rf /opt/geckodriver \
@@ -77,7 +82,7 @@ RUN wget --no-verbose -O /tmp/geckodriver.tar.gz https://github.com/mozilla/geck
 && ln -fs /opt/geckodriver-$GECKODRIVER_VERSION /usr/bin/geckodriver
 
 # --- DO NOT EDIT OR DELETE BETWEEN THE LINES --- #
-RUN pip install tensorflow==1.2.1
+#RUN pip install tensorflow==1.2.1
 # --- ~ DO NOT EDIT OR DELETE BETWEEN THE LINES --- #
 
 COPY jupyter_notebook_config.py /root/.jupyter/
