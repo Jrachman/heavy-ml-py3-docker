@@ -125,7 +125,7 @@ WORKDIR /tensorflow
 # more difficult to experiment with local changes. Instead, just add
 # the built directory to the path.
 
-ENV CI_BUILD_PYTHON python
+ENV CI_BUILD_PYTHON python3
 
 RUN tensorflow/tools/ci_build/builds/configured CPU \
     bazel build -c opt --cxxopt="-D_GLIBCXX_USE_CXX11_ABI=0" \
