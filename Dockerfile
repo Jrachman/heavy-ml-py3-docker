@@ -4,6 +4,7 @@ MAINTAINER Julian Rachman <jmrachman@gmail.com>
 
 RUN apt-get update && apt-get install -y --no-install-recommends \
         build-essential \
+        ca-certificates \ 
         curl \
         git \
         libfreetype6-dev \
@@ -96,7 +97,7 @@ RUN git clone https://github.com/tensorflow/tensorflow
 
 RUN echo "deb [arch=amd64] http://storage.googleapis.com/bazel-apt stable jdk1.8"
 RUN tee /etc/apt/sources.list.d/bazel.list
-RUN wget https://bazel.build/bazel-release.pub.gpg && apt-key add bazel-release.pub.gpg
+RUN wget https://bazel.build/bazel-release.pub.gpg && apt-key add -
 RUN apt-get update 
 RUN apt-get install bazel
 RUN apt-get upgrade bazel
