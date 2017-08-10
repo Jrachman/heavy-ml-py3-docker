@@ -40,6 +40,12 @@ Designed for heavy computations and general, ultimate use in Python 3 including 
 
 ---
 
+**Jupyter Notebook and Vim**
+
+The two options that are present for programming are Jupyter and Vim. To access Jupyter, navigate to the config directory and type `./run_jupyter.sh --allow-root`. To access Vim, find the file you want to open (i.e., test.py) and then type `vim test.py`. To execute .py files in the terminal, type `python3 test.py`.
+
+---
+
 **Git**
 
 *Clone*
