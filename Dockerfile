@@ -6,10 +6,12 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
         build-essential \
         curl \
         git \
+        libcurl3-dev \
         libfreetype6-dev \
         libpng12-dev \
         libzmq3-dev \
         openjdk-8-jdk \
+        openjdk-8-jre-headless \
         pkg-config \
         python3 \
         python3-dev \
@@ -20,6 +22,8 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
         unzip \
         vim \
         wget \
+        zip \
+        zlib1g-dev \
         && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
