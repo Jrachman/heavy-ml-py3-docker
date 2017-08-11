@@ -130,7 +130,7 @@ WORKDIR /tensorflow
 ENV CI_BUILD_PYTHON python3
 
 RUN tensorflow/tools/ci_build/builds/configured CPU \
-    bazel build -c opt --cxxopt="-D_GLIBCXX_USE_CXX11_ABI=0" \
+    bazel build -c opt --copt=-mavx --copt=-mavx2 --copt=-mfma --copt=-mfpmath=both --copt=-msse4.2 --cxxopt="-D_GLIBCXX_USE_CXX11_ABI=0" \
         tensorflow/tools/pip_package:build_pip_package && \
     bazel-bin/tensorflow/tools/pip_package/build_pip_package /tmp/pip && \
     pip --no-cache-dir install --upgrade /tmp/pip/tensorflow-*.whl && \
