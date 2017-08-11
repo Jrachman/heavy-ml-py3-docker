@@ -18,7 +18,7 @@ Designed for heavy computations and general, ultimate use in Python 3 including 
 
 3. Use `docker run -it --network=host -p 8888:8888 -e "PASSWORD=pass" --name jrmlpy3 julianrachman/heavy-ml-py3:latest` to run this.
 
-4. Run `config/run_jupyter.sh --allow-root` and you are set! Just visit http://localhost:8888 and the password should be "pass" (if localhost does not work, remove the the container that you just made and run the same `run` command except the `--network=host` part).
+4. Run `notebooks/config/run_jupyter.sh --allow-root` and you are set! Just visit http://localhost:8888 and the password should be "pass" (if localhost does not work, remove the the container that you just made and run the same `run` command except the `--network=host` part).
 
 *Local build*
 
@@ -30,7 +30,7 @@ Designed for heavy computations and general, ultimate use in Python 3 including 
  
 4. Now execute `docker run -it -p 8888:8888 -e "PASSWORD=pass" --name jrmlpy3 <IMAGE ID>`
 
-4. Run `config/run_jupyter.sh --allow-root` and you are set! Just visit http://localhost:8888 and the password should be "pass."
+4. Run `notebooks/config/run_jupyter.sh --allow-root` and you are set! Just visit http://localhost:8888 and the password should be "pass."
  
 *Docker Compose build*
  
@@ -42,7 +42,7 @@ Designed for heavy computations and general, ultimate use in Python 3 including 
 
 **Jupyter Notebook and Vim**
 
-The two options that are present for programming are Jupyter and Vim. To access Jupyter, navigate to the config directory and type `./run_jupyter.sh --allow-root`. To access Vim, find the file you want to open (i.e., test.py) and then type `vim test.py`. To execute .py files in the terminal, type `python3 test.py`.
+The two options that are present for programming are Jupyter and Vim. To access Jupyter, navigate to the "config" directory and type `./run_jupyter.sh --allow-root`. To access Vim, find the file you want to open (i.e., "test.py") and then type `vim test.py`. To execute .py files in the terminal, type `python3 test.py`.
 
 ---
 
