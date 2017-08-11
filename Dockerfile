@@ -138,5 +138,5 @@ RUN tensorflow/tools/ci_build/builds/configured CPU \
     rm -rf /root/.cache
 # Clean up pip wheel and Bazel cache when done.
 
-WORKDIR /root
+WORKDIR /
 CMD ["/bin/bash"]
